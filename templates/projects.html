@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="projects">
+    <h2><i class="fas fa-briefcase"></i> My Projects</h2>
+
+    <div class="project">
+        <div class="project-content">
+            <h3><i class="fas fa-laptop-code"></i> Machine Learning Model for Student Performance Prediction</h3>
+            <p>Developed an end-to-end machine learning pipeline to predict student performance using demographic and academic data. Built a Random Forest model in Python with 85% accuracy and deployed it in a Flask web app for real-time predictions...</p>
+        </div>
+        <img src="/static/images/ML_project.jpg" alt="ML Project" class="project-image">
+        <a href="https://github.com/Ranjith-0508/MLproject" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+    </div>
+
+    <div class="project">
+        <div class="project-content">
+            <h3><i class="fas fa-tachometer-alt"></i> Power BI Dashboard: Employee Training Attendance and Metrics</h3>
+            <p>Designed an interactive Power BI dashboard to analyze training attendance and employee metrics for 38 participants...</p>
+        </div>
+        <img src="/static/images/Dashboard.jpg" alt="Power BI Dashboard" class="project-image">
+        <a href="https://app.powerbi.com/reportEmbed" target="_blank" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+    </div>
+</section>
+{% endblock %}

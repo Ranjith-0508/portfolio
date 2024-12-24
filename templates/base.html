@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Custom Script -->
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="logo" data-aos="fade-right">My Portfolio</div>
+        <ul class="nav-icons">
+            <li><a href="/" title="Home" data-aos="fade-down"><i class="fas fa-home"></i></a></li>
+            <li><a href="/about" title="About" data-aos="fade-down"><i class="fas fa-user"></i></a></li>
+            <li><a href="/projects" title="Projects" data-aos="fade-down"><i class="fas fa-briefcase"></i></a></li>
+            <li><a href="/contact" title="Contact" data-aos="fade-down"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main data-aos="fade-up">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer data-aos="fade-up">
+        <p>&copy; 2024 Ranjith. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // Animation duration in milliseconds
+            once: true, // Animation triggers only once
+        });
+    </script>
+</body>
+</html>
