@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os  # Add this for compatibility with deployment environments
 
 app = Flask(__name__)
 
@@ -9,7 +10,7 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.html')
-    
+
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
@@ -22,4 +23,5 @@ def contact():
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use environment variables for host and port for deployment compatibility
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)), debug=True)
